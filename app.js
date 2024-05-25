@@ -26,7 +26,6 @@ app.get('/result/:id', (req, res) => {
 
 app.post('/login', (req, res) => {
     const uname = req.body.username;
-    if (uname == '') res.redirect('/');
     
     if (uname === 'tsineat') {
         res.redirect('/result/t');
@@ -34,6 +33,8 @@ app.post('/login', (req, res) => {
         res.redirect('/result/v');
     } else if (uname == 'henok') {
         res.redirect('/result/w');
+    } else {
+        res.redirect('/');
     }
 });
 

@@ -6,14 +6,22 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/result', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'main.html'));
+app.get('/result/:id', (req, res) => {
+    const id = req.params.id;
+    if (id == 't') {
+        res.sendFile(path.join(__dirname, 'public', 'main.html'));
+    } else if (id == 'v') {
+        res.sendFile(path.join(__dirname, 'public', 'main1.html'));
+    } else if (id == 'w') {
+        res.sendFile(path.join(__dirname, 'public', 'main2.html'));
+    }
+    
 });
 
 app.post('/login', (req, res) => {
@@ -21,12 +29,14 @@ app.post('/login', (req, res) => {
     if (uname == '') res.redirect('/');
     
     if (uname === 'tsineat') {
-        res.redirect('/result');
+        res.redirect('/result/t');
+    } else if (uname == 'kibrom') {
+        res.redirect('/result/v');
+    } else if (uname == 'henok') {
+        res.redirect('/result/w');
     }
 });
 
 app.listen(3000, () => {
     console.log('server online');
 });
-
-

@@ -9,8 +9,8 @@ app.use(session({
     secret: 'your-secret-key',
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false }
-  }));
+    cookie: { secure: true }
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -32,12 +32,12 @@ app.get('/result', (req, res) => {
     } else {
         res.send(id)
     }
-    
+
 });
 
 app.post('/login', (req, res) => {
     const uname = req.body.username;
-    
+
     if (uname === 'tsineat') {
         req.session.dataToSend = 't';
         res.redirect('/result');
@@ -50,6 +50,10 @@ app.post('/login', (req, res) => {
     } else {
         res.redirect('/');
     }
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'notfound.html'));
 });
 
 app.listen(3000, () => {

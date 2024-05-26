@@ -31,11 +31,11 @@ app.post('/login', (req, res) => {
     const uname = req.body.username;
 
     if (uname === 'tsineat') {
-        res.redirect('/result?q=t');
+        res.redirect('/result/t');
     } else if (uname == 'kibrom') {
-        res.redirect('/result?q=v');
+        res.redirect('/result/v');
     } else if (uname == 'henok') {
-        res.redirect('/result?q=w');
+        res.redirect('/result/w');
     } else {
         res.redirect('/');
     }

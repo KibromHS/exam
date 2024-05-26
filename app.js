@@ -1,16 +1,8 @@
 const express = require('express');
-const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
-}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -20,8 +12,8 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/result', (req, res) => {
-    const id = req.session.dataToSend;
+app.get('/result/:id', (req, res) => {
+    const id = req.params.id;
 
     if (id == 't') {
         res.sendFile(path.join(__dirname, 'public', 'main.html'));
@@ -39,20 +31,17 @@ app.post('/login', (req, res) => {
     const uname = req.body.username;
 
     if (uname === 'tsineat') {
-        req.session.dataToSend = 't';
-        res.redirect('/result');
+        res.redirect('/result?q=t');
     } else if (uname == 'kibrom') {
-        req.session.dataToSend = 'v';
-        res.redirect('/result');
+        res.redirect('/result?q=v');
     } else if (uname == 'henok') {
-        req.session.dataToSend = 'w';
-        res.redirect('/result');
+        res.redirect('/result?q=w');
     } else {
         res.redirect('/');
     }
 });
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'notfound.html'));
 });
 

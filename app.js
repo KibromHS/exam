@@ -8,8 +8,9 @@ const app = express();
 app.use(session({
     secret: 'your-secret-key',
     resave: false,
-    saveUninitialized: true
-}));
+    saveUninitialized: true,
+    cookie: { secure: false }
+  }));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

@@ -5,25 +5,43 @@
     <link rel="icon" type="image/x-icon" href="/moe_logo.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Exit Exam Result | MoE</title>
-    <meta name="title" content="MoE - Exit Exam Result">
-    <meta name="description" content="Instantly access your exam results on our user-friendly website.">
+    <meta name="title" content="MoE - Exit Exam Result" />
+    <meta
+      name="description"
+      content="Instantly access your exam results on our user-friendly website."
+    />
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="assets/index.css" />
     <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
     <!-- <script type="module" crossorigin src="/public/assets/index.js"></script> -->
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://result-ethernet-edu.vercel.app" />
     <meta property="og:title" content="MoE - Exit Exam Result" />
-    <meta property="og:description" content="Instantly access your exam results on our user-friendly website." />
-    <meta property="og:image" content="https://result.ethernet.edu.et/logo.png" />
+    <meta
+      property="og:description"
+      content="Instantly access your exam results on our user-friendly website."
+    />
+    <meta
+      property="og:image"
+      content="https://result.ethernet.edu.et/logo.png"
+    />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://result-ethernet-edu.vercel.app" />
+    <meta
+      property="twitter:url"
+      content="https://result-ethernet-edu.vercel.app"
+    />
     <meta property="twitter:title" content="MoE - Exit Exam Result" />
-    <meta property="twitter:description" content="Instantly access your exam results on our user-friendly website." />
-    <meta property="twitter:image" content="https://result.ethernet.edu.et/logo.png" />
+    <meta
+      property="twitter:description"
+      content="Instantly access your exam results on our user-friendly website."
+    />
+    <meta
+      property="twitter:image"
+      content="https://result.ethernet.edu.et/logo.png"
+    />
     <style>
       html,
       #root,
@@ -32,127 +50,107 @@
       }
     </style>
   </head>
-  <body>
-    <div class="flex flex-col justify-between bg-gray-100" id="root">
-      <div class="container mx-auto px-4 py-4">
-        <div class="max-w-xl mx-auto text-center">
-          <div class="mb-8">
-            <img
-              src="/moe_logo.ico"
-              width="100"
-              height="100"
-              alt="Logo"
-              class="mx-auto mb-2"
-            />
-            <h3 class="text-2xl font-bold">
-              Exit Exam Result | የዩኒቨርሲቲ መውጫ ፈተና ውጤት
-            </h3>
-          </div>
-          <form action="/login" method="post"
-            class="bg-white rounded-md shadow-md p-5 border-t-4 border-blue-500 p-4"
-          >
-            <div class="mb-4">
-              <input
-                type="username"
-                id="username"
-                name="username"
-                placeholder="Enter your username"
-                class="w-full px-4 py-2 border border-gray-300 rounded-md mr-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                value=""
-              />
-            </div>
-            <!-- <div>
-              <div>
-                <div style="width: 304px; height: 78px">
-                  <div>
-                    <iframe
-                      title="reCAPTCHA"
-                      width="304"
-                      height="78"
-                      role="presentation"
-                      name="a-tmdlo9ricr16"
-                      frameborder="0"
-                      scrolling="no"
-                      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                      src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfCYjUnAAAAAKKY9ZGaNHk7eaAzlM2JgG7t2HRZ&amp;co=aHR0cHM6Ly9yZXN1bHQuZXRoZXJuZXQuZWR1LmV0OjQ0Mw..&amp;hl=en&amp;type=image&amp;v=8k85QBI-qzxmenDv318AZH30&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=r27uwkx1rto1"
-                    ></iframe>
-                  </div>
-                  <textarea
-                    id="g-recaptcha-response"
-                    name="g-recaptcha-response"
-                    class="g-recaptcha-response"
-                    style="
-                      width: 250px;
-                      height: 40px;
-                      border: 1px solid rgb(193, 193, 193);
-                      margin: 10px 25px;
-                      padding: 0px;
-                      resize: none;
-                      display: none;
-                    "
-                  ></textarea>
-                </div>
-                <iframe style="display: none"></iframe>
-              </div> 
-            </div> -->
-            <!-- <div class="g-recaptcha" data-sitekey="6Lc45-EpAAAAAKKibZRZb2EGrVI22gUFUWf0XhX5"></div> -->
-            <div class="g-recaptcha"
-                data-sitekey="6LeA-OEpAAAAAGyqdv29y8yp6K0XLbb3Qd2wcaH1"
-                data-callback='onSubmit'>
-          </div>
-            <button
-              disabled
-              type="submit"
-              class="submit-btn block w-full px-4 py-2 bg-blue-500 text-white rounded-md focus:outline-none opacity-50"
-            >
-              View Result
-            </button>
-            <div class="flex align-right justify-end">
-              <a
-                href="https://t.me/moe_exit_exam"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="bg-grey-light hover:bg-grey text-green-darkest py-2 px-4 rounded inline-flex items-center"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 256 256"
-                >
-                  <defs>
-                    <linearGradient
-                      id="logosTelegram0"
-                      x1="50%"
-                      x2="50%"
-                      y1="0%"
-                      y2="100%"
-                    >
-                      <stop offset="0%" stop-color="#2AABEE"></stop>
-                      <stop offset="100%" stop-color="#229ED9"></stop>
-                    </linearGradient>
-                  </defs>
-                  <path
-                    fill="url(#logosTelegram0)"
-                    d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"
-                  ></path>
-                  <path
-                    fill="#FFF"
-                    d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072Z"
-                  ></path></svg
-              ></a>
-            </div>
-          </form>
-        </div>
-      </div>
-      <footer class="bg-gray-200 py-4 text-center">
-        <p class="text-gray-600">© 2024 MoE. All rights reserved.</p>
-      </footer>
-    </div>
 
-    <!-- <script
-      src="https://www.google.com/recaptcha/api.js?onload=onloadcallback&amp;render=explicit"
+  <body cz-shortcut-listen="true">
+    <div class="card">
+      <img
+        src="/moe_logo.ico"
+        alt="Logo"
+        class="logo"
+      />
+      <div class="card-header">Exit Exam Result | የዩኒቨርሲቲ መውጫ ፈተና ውጤት</div>
+      <div class="card-body">
+        <form
+          action="https://result.ethernet.edu.et/results"
+          method="get"
+          class="form-group"
+        >
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter your registration number ( username )"
+            class="form-control"
+            id="usernameInput"
+            oninput="handleInput()"
+          />
+          <div class="form-group captcha">
+            <div class="g-recaptcha"
+                  data-sitekey="6LeA-OEpAAAAAGyqdv29y8yp6K0XLbb3Qd2wcaH1"></div>
+            <!-- Ensure that the RECAPTCHA_SITE_KEY is fetched from .env and is valid -->
+            <!-- <div
+              class="g-recaptcha"
+              data-sitekey="6LdR5fMpAAAAANcjSUhHizVGJoiWZ5vkFUhS1F9p"
+            >
+              <div style="width: 304px; height: 78px"> -->
+                <!-- <div>
+                  <iframe
+                    title="reCAPTCHA"
+                    width="304"
+                    height="78"
+                    role="presentation"
+                    name="a-rcs5916x62y9"
+                    frameborder="0"
+                    scrolling="no"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdR5fMpAAAAANcjSUhHizVGJoiWZ5vkFUhS1F9p&amp;co=aHR0cHM6Ly9yZXN1bHQuZXRoZXJuZXQuZWR1LmV0OjQ0Mw..&amp;hl=en&amp;v=KXX4ARWFlYTftefkdODAYWZh&amp;size=normal&amp;cb=mlbpp1ndne7v"
+                  ></iframe>
+                </div> -->
+                <!-- <textarea
+                  id="g-recaptcha-response"
+                  name="g-recaptcha-response"
+                  class="g-recaptcha-response"
+                  style="
+                    width: 250px;
+                    height: 40px;
+                    border: 1px solid rgb(193, 193, 193);
+                    margin: 10px 25px;
+                    padding: 0px;
+                    resize: none;
+                    display: none;
+                  "
+                ></textarea>
+              </div>
+              <iframe style="display: none"></iframe>
+            </div> -->
+
+
+
+
+
+          </div> 
+          <button
+            type="submit"
+            class="btn btn-primary btn-block"
+            id="resultButton"
+            disabled=""
+          >
+            View Result
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="footer">© 2024 MoE. All rights reserved.</div>
+    <!-- Ensure the reCAPTCHA library is correctly loaded -->
+    <script
+      type="text/javascript"
       async=""
+      src="https://www.gstatic.com/recaptcha/releases/KXX4ARWFlYTftefkdODAYWZh/recaptcha__en.js"
+      crossorigin="anonymous"
+      integrity="sha384-9QqbrduyhvTkE1knPG7e8vZdHL95dTvL+5nDP2Q75ZzSBMqM7hBF4FBqPllxiD5J"
     ></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async=""
+      defer=""
+    ></script>
+    <script>
+      function handleInput() {
+        const usernameInput = document.getElementById("usernameInput").value;
+        const resultButton = document.getElementById("resultButton");
+        resultButton.disabled = !usernameInput.trim();
+      }
+    </script>
+
     <div
       style="
         background-color: rgb(255, 255, 255);
@@ -202,26 +200,23 @@
           margin-top: -10px;
           z-index: 2000000000;
         "
-      ></div> -->
-      <!-- <div style="z-index: 2000000000; position: relative">
-        <iframe
-          title="recaptcha challenge expires in two minutes"
-          name="c-tmdlo9ricr16"
-          frameborder="0"
-          scrolling="no"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-          src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=8k85QBI-qzxmenDv318AZH30&amp;k=6LfCYjUnAAAAAKKY9ZGaNHk7eaAzlM2JgG7t2HRZ"
-          style="width: 100%; height: 100%"
-        ></iframe>
-      </div> -->
+      ></div>
+      <div style="z-index: 2000000000; position: relative">
+        <div class="g-recaptcha"
+                data-sitekey="6LeA-OEpAAAAAGyqdv29y8yp6K0XLbb3Qd2wcaH1"
+                data-callback='onSubmit'>
+          </div>
+      </div>
     </div>
-
-    <script>
-      function onSubmit(token) {
-        const btn = document.getElementsByClassName('submit-btn')[0];
-        btn.disabled = false;
-        btn.classList.remove('opacity-50');
-      }
-    </script>
   </body>
 </html>
+
+
+
+<!-- <script>
+            function onSubmit(token) {
+              const btn = document.getElementsByClassName('submit-btn')[0];
+              btn.disabled = false;
+              btn.classList.remove('opacity-50');
+            }
+          </script> -->

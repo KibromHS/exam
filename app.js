@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.get('/result/:id', (req, res) => {
+app.get('/results/:id', (req, res) => {
     const id = req.params.id;
 
     if (id == 't') {
@@ -31,11 +31,11 @@ app.post('/login', (req, res) => {
     const uname = req.body.username;
 
     if (uname === 'tsineat') {
-        res.redirect('/result/t');
+        res.redirect('/results/t');
     } else if (uname == 'kibrom') {
-        res.redirect('/result/v');
+        res.redirect('/results/v');
     } else if (uname == 'henok') {
-        res.redirect('/result/w');
+        res.redirect('/results/w');
     } else {
         res.redirect('/');
     }

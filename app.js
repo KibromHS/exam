@@ -22,7 +22,7 @@ app.get('/results/:id', (req, res) => {
     } else if (id == 'w') {
         res.sendFile(path.join(__dirname, 'public', 'main2.html'));
     } else {
-        res.send(id)
+        res.sendFile(path.join(__dirname, 'public', 'nostudent.html'));
     }
 
 });
@@ -30,19 +30,19 @@ app.get('/results/:id', (req, res) => {
 app.post('/login', (req, res) => {
     const uname = req.body.username;
 
-    if (uname === 'tsineat') {
+    if (uname === 'newp19453/16') {
         res.redirect('/results/t');
-    } else if (uname == 'kibrom') {
+    } else if (uname == 'newp19464/16') {
         res.redirect('/results/v');
-    } else if (uname == 'henok') {
+    } else if (uname == 'newp19478/16') {
         res.redirect('/results/w');
     } else {
-        res.redirect('/');
+        res.redirect('/results/n');
     }
 });
 
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'notfound.html'));
+    res.sendFile(path.join(__dirname, 'public', 'nofound.html'));
 });
 
 app.listen(3000, () => {
